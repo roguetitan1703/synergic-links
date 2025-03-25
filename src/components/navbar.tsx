@@ -113,7 +113,7 @@ const Navbar = () => {
 
         {/* Right: Appointment Button */}
         <Link to="/appointment">
-          <button className="bg-accent text-textDark px-4 py-2 rounded-md font-bold hover:bg-accent-hover transition duration-300">
+          <button className="bg-accent hover:bg-accent-hover text-darkBg px-4 py-2 rounded-md font-bold transition duration-300">
             Make an Appointment
           </button>
         </Link>
@@ -123,7 +123,7 @@ const Navbar = () => {
       {openMenu !== null && (
         <div
           ref={dropdownRef}
-          className="dropdown-menu absolute left-0 top-full w-full bg-gradient-to-r from-primary to-secondary shadow-lg transform origin-top animate-slideDown p-6 border-t border-accent"
+          className="dropdown-menu absolute left-0 top-full w-full z-50 bg-gradient-to-r from-primary to-secondary shadow-lg transform origin-top animate-slideDown p-6 border-t border-accent"
         >
           <div className="grid grid-cols-3 gap-6">
             {menus[openMenu].links.map((link, i) => (
@@ -138,8 +138,7 @@ const Navbar = () => {
                   <h4 className="text-lg font-bold group-hover:text-accent">
                     {link.name}
                   </h4>
-                  {/* Subtext hidden by default, visible on group hover */}
-                  <p className="text-sm text-textLight group-hover:opacity-100 transition duration-300">
+                  <p className="text-sm text-textLight  group-hover:opacity-100 transition duration-300">
                     {link.description}
                   </p>
                 </div>

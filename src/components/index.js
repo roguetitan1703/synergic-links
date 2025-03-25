@@ -7,4 +7,6 @@ export { default as AnimatedBorderContainer } from "./animations/animatedBorder.
 export { default as TheatreWhere } from "./theatre.tsx";
 export { default as BreadCrumbs } from "./breadcrumbs.tsx";
 export { default as Buttonnew } from "./button";
+export { default as ServicesCarousel } from "./servicesCaraousel.tsx";
+export { default as Topbar } from "./topbar.tsx";
 export { default as ProgressBar } from "./progress.tsx";
