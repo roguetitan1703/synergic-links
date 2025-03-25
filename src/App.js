@@ -8,7 +8,7 @@ const App = () => {
       <div className="font-sans">
         <Navbar />
         <Naves />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </BrowserRouter>
   );
