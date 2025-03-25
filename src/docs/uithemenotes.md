@@ -1,150 +1,190 @@
-Below is a refined design documentation that incorporates typography, spacing, and layout guidelines to ensure consistency and professionalism across your UI. Use this document as your style guide for your Database Services website.
+# **UI Theme Design Documentation**
+
+### **Database Services Website**
+
+This document defines the **visual identity**, **layout structure**, and **interactive elements** to maintain a consistent and professional design across all pages.
 
 ---
 
-# UI Theme Design Documentation
+## **1. Color Palette**
 
-This document outlines the visual and layout guidelines for our Database Services website. By adhering to these guidelines, every component and section will have a consistent look and feel.
+| **Color**      | **Hex Code**              | **Usage**                                                   |
+| -------------- | ------------------------- | ----------------------------------------------------------- |
+| **Primary**    | `#1B3A57` (Deep Blue)     | Headings, brand elements, backgrounds (hero, about).        |
+| **Secondary**  | `#5E3A9A` (Royal Purple)  | Accent elements, section backgrounds, interactive elements. |
+| **Accent**     | `#FFD700` (Gold)          | CTA buttons, highlights, important icons.                   |
+| **Background** | `#121212` (Charcoal Gray) | Section backgrounds, footer, testimonials.                  |
+| **Text**       | `#EAEAEA` (White/Silver)  | Default text color for body and subheadings.                |
 
----
+### **Hover States**
 
-## 1. Color Palette
-
-- **Primary:** Deep Blue (#1B3A57)  
-  _Usage:_ Headings, brand elements, hero backgrounds.
-- **Secondary:** Royal Purple (#5E3A9A)  
-  _Usage:_ Accents, secondary elements, background hints.
-- **Accent:** Gold (#FFD700)  
-  _Usage:_ CTA buttons, highlights, icons.
-- **Background:** Charcoal Gray (#121212)  
-  _Usage:_ Section backgrounds (e.g., testimonials) or dark-themed sections.
-- **Text:** White/Silver (#EAEAEA)  
-  _Usage:_ Body text, subheadings.
-- **Hover States:**
-  - Accent Hover: A lighter variant of gold (e.g., #ffdf4d)
-  - Secondary Hover: A lighter shade of purple (e.g., #7144b2)
-  - Primary Hover: A lighter blue (e.g., #264b6c)
+- **Accent Hover:** Lighter gold `#ffdf4d`
+- **Secondary Hover:** Lighter purple `#7144b2`
+- **Primary Hover:** Lighter blue `#264b6c`
 
 ---
 
-## 2. Typography
+## **2. Typography & Font Guidelines**
 
-### Font Families
+### **Font Families**
 
-- **Sans-serif:** `Roobert`, `Inter`, `ui-sans-serif`, `system-ui`  
-  _Usage:_ All general text.
-- **Monospace:** `Inconsolata`, `ui-monospace`, `SFMono-Regular`, `Menlo`, `Monaco`, `Consolas`, `Liberation Mono`, `Courier New`, `monospace`  
-  _Usage:_ Code snippets and data-related elements.
+- **Sans-serif:** `Roobert`, `Inter`, `ui-sans-serif`, `system-ui` (For all general text).
+- **Monospace:** `Inconsolata`, `ui-monospace`, `SFMono-Regular` (For code and data-related elements).
 
-### Font Sizes & Heading Hierarchy
+### **Font Sizes & Heading Hierarchy**
 
-- **Base Font Size:** 16px (`text-base`)
-- **Heading 1 (H1):**
-  - Size: `text-5xl` (approx. 3rem) or `text-6xl` for very prominent hero headlines.
-  - Weight: Bold.
-  - Color: Preferably `text-accent` for emphasis or `text-textLight` if needed for contrast.
-- **Heading 2 (H2):**
-  - Size: `text-4xl` (approx. 2.25rem).
-  - Usage: Section headings.
-- **Heading 3 (H3):**
-  - Size: `text-3xl` (approx. 1.875rem).
-  - Usage: Sub-headings within sections.
-- **Heading 4 (H4):**
-  - Size: `text-2xl` (approx. 1.5rem).
-  - Usage: Minor headings or card titles.
-- **Body Text:**
-  - Size: `text-base` (16px) or `text-lg` (18px) for improved readability.
-- **Line Heights:**
-  - Headings: Use `leading-tight`.
-  - Body: Use `leading-relaxed`.
+| **Element**     | **Class**                | **Size**    | **Usage**                                   |
+| --------------- | ------------------------ | ----------- | ------------------------------------------- |
+| **H1**          | `text-5xl` to `text-6xl` | 3rem - 4rem | Large headlines (Hero, major sections).     |
+| **H2**          | `text-4xl`               | 2.25rem     | Section headings.                           |
+| **H3**          | `text-3xl`               | 1.875rem    | Sub-headings.                               |
+| **H4**          | `text-2xl`               | 1.5rem      | Minor headings (e.g., service card titles). |
+| **Body Text**   | `text-base` to `text-lg` | 16px - 18px | General readability.                        |
+| **CTA Buttons** | `text-lg`                | 18px        | Call-to-action buttons.                     |
+
+### **Text Spacing**
+
+- **Line Height:**
+  - Headings: `leading-tight`
+  - Body text: `leading-relaxed`
 - **Letter Spacing:**
-  - Default: `tracking-normal`.
-  - For emphasis on headings, consider `tracking-wide`.
+  - Default: `tracking-normal`
+  - For emphasis on headings: `tracking-wide`
 
 ---
 
-## 3. Spacing & Layout
+## **3. Spacing & Layout**
 
-### Margins and Paddings
+### **Global Spacing**
 
-- **Spacing Scale:** Use Tailwind’s default spacing scale (e.g., 4 = 1rem, 6 = 1.5rem, 8 = 2rem, 10 = 2.5rem, 12 = 3rem, etc.).
-- **Hero Section:**
-  - Padding: `p-8` on mobile, `p-16` on desktop.
-  - Margin: Minimal margins are needed since it’s full-screen.
-- **Headings & Paragraphs:**
-  - Headings: `mb-4` for H1/H2, `mb-2` for smaller headings.
-  - Paragraphs: `mb-4` or `mb-8` for sufficient separation.
-- **Buttons:**
-  - Padding: `py-3 px-6`.
-  - Margin Top: `mt-6` to separate from adjacent content.
-- **Cards (e.g., in Carousel):**
-  - Use `gap-6` between grid items for consistency.
+- **Use Tailwind's spacing scale** (`4 = 1rem`, `6 = 1.5rem`, etc.).
+- **Maintain consistent padding and margins** for all sections.
 
-### Layout Guidelines
+### **Specific Layout Guidelines**
 
-- **Hero Section:**
-  - Full-screen (`h-screen`).
-  - Background image without gradient (unless needed for contrast).
-  - Center content vertically and horizontally.
-- **Services Carousel:**
-  - Each slide should use `min-w-full` so they align properly in a horizontal flex container.
-  - Use consistent padding (`p-8` or `p-16`) to ensure content is evenly spaced.
-- **Navbar & Other Components:**
-  - Maintain consistent margins and padding to achieve a cohesive look across the site.
-- **Responsive Design:**
-  - Utilize responsive classes (`md:`, `lg:`) to adjust font sizes, spacing, and layout for different screen sizes.
+| **Section**      | **Padding**                      | **Margin**  | **Alignment**                              |
+| ---------------- | -------------------------------- | ----------- | ------------------------------------------ |
+| **Hero Section** | `p-8` (mobile), `p-16` (desktop) | `mt-4 mb-6` | Centered, full-screen height.              |
+| **Headings**     | `mb-4` (H1/H2), `mb-2` (H3/H4)   | -           | Left-aligned or centered based on section. |
+| **Paragraphs**   | `mb-4` to `mb-8`                 | -           | Wide spacing for readability.              |
+| **Buttons**      | `py-3 px-6`                      | `mt-6`      | Rounded with sufficient whitespace.        |
+| **Cards**        | `gap-6` between grid items       | -           | Equal spacing between elements.            |
 
 ---
 
-## 4. Component-Specific Guidelines
+## **4. Component-Specific Guidelines**
 
-### Hero Section
+### **Hero Section**
 
-- **Background:** Use a high-quality background image covering the entire screen (`bg-cover bg-center`) without overusing gradients.
-- **Overlay:** If needed for text contrast, use a subtle overlay with low opacity.
-- **Content:**
-  - Tag/Pill: Small label (e.g., “Enterprise-Grade Solutions”) using `bg-accent` with rounded-full and padding.
-  - Headline: Bold, large, and centered with ample white space.
-  - CTA Buttons: Use your accent for primary action, maintain hover states with smooth transitions.
-  - Service Tags: Display key offerings in small badges or inline links for quick insight.
+✅ **Background:** Dark blue gradient with a subtle digital pattern (`bg-cover bg-center`).  
+✅ **Overlay (if needed):** Subtle dark overlay (`bg-opacity-50`) for text contrast.  
+✅ **Headline:** Gold (`text-accent`), bold, large serif font.  
+✅ **Subtext:** White (`text-textLight`), clean, informative.  
+✅ **CTA Button:**
 
-### Services Carousel
-
-- **Layout:**
-  - Each slide should have a solid background (`bg-darkBg`) or use a subtle gradient if needed.
-  - Text on the left, image on the right on desktop; stack vertically on mobile.
-- **Interactions:**
-  - Auto-slide with pause on hover.
-  - Navigation buttons with clear ARIA labels.
-- **Animations:**
-  - Smooth slide transitions using `transition-transform duration-500`.
-  - Subtle hover effects on buttons and images to signal interactivity.
-
-### Navbar
-
-- **Dropdowns:**
-  - Use a high z-index to ensure dropdowns appear above other elements.
-  - Ensure dropdowns use a consistent background (e.g., matching the navbar’s gradient or a solid `bg-darkBg`) with clear spacing and transitions.
-- **Buttons:**
-  - Maintain consistent styling for the appointment button.
-- **Typography:**
-  - Consistent font sizes and spacing as defined in the global guidelines.
-- **Accessibility:**
-  - Include ARIA labels and focus states for interactive elements.
+- **Primary CTA:** Gold with black text (`bg-accent text-primary`).
+- **Hover:** Subtle lightening (`hover:bg-accent-hover`).
 
 ---
 
-## 5. Additional Best Practices
+### **About Section**
 
-- **Accessibility:** Ensure color contrast meets WCAG guidelines; use ARIA labels where applicable.
-- **Consistency:**
-  - Create reusable components that reference these design tokens.
-  - Document any custom classes or utility functions in your codebase.
-- **Performance:** Optimize images and avoid overly complex animations.
-- **Testing:** Verify design consistency across different devices and screen sizes using responsive design testing tools.
+✅ **Background:** Royal Purple (`bg-secondary`) with blended Primary Blue (`bg-primary`).  
+✅ **Graphics:** Gold-accented icons & minimalist UI design.  
+✅ **Content:** Brief company introduction with a modern, trusted aesthetic.
 
 ---
 
-By following these guidelines, you’ll maintain a cohesive, professional, and user-friendly interface that aligns with industry standards. This design documentation will serve as the foundation for all UI components, ensuring every element—from typography to spacing—is consistently applied across your Database Services website.
+### **Services Section**
 
-Let me know if you need further refinement or additional sections!
+✅ **Layout:** 3-4 card grid with hover effects (`hover:bg-purple-hover` or `hover:bg-accent-hover`).  
+✅ **Example Cards:**
+
+- **Data Migration:** "Seamless transition without downtime."
+- **Cloud Database Solutions:** "Flexible & scalable solutions."
+- **Database Security:** "Your data, fortified with industry-leading encryption."  
+  ✅ **Typography:** Titles in gold (`text-accent`), body text in white (`text-textLight`).
+
+---
+
+### **Testimonials / Case Studies**
+
+✅ **Background:** Charcoal Gray (`bg-darkBg`) for contrast.  
+✅ **Text:** White with gold highlights (`text-textLight text-accent`).  
+✅ **Hover Effect:** Floating effect (`hover:scale-105 transition-transform`).
+
+---
+
+### **Contact & Inquiry Section**
+
+✅ **Form Background:** Deep Blue / Purple gradient.  
+✅ **Input Fields:** White fields (`bg-light-bg text-primary`).  
+✅ **CTA Button:** Gold & black (`bg-accent text-darkBg`).  
+✅ **Hover State:** Darker gold (`hover:bg-accent-hover`).
+
+---
+
+## **5. Navbar & Top Bar**
+
+### **Navbar Design**
+
+✅ **Navigation Links:** White (`text-textLight`), consistent padding.  
+✅ **Hover Effect:** Soft glow transition.  
+✅ **Dropdowns:**
+
+- Background: Matches navbar for consistency.
+- Spacing: Sufficient padding & rounded edges.  
+  ✅ **Appointment Button:** Gold button (`bg-accent`) with hover lightening.
+
+### **Top Bar for External Links**
+
+✅ **Position:** **Fixed, top-right**, blending into the navbar while standing out.  
+✅ **Background:** **Semi-transparent gradient or matching navbar** for seamless integration.  
+✅ **Icons (WhatsApp & LinkedIn):**
+
+- **Icon Size:** `lg` (`text-light-bg`).
+- **Arrow Icon:** Positioned **45° up**, transitions to **→** when hovered.  
+  ✅ **Hover Effect:**
+
+```jsx
+<a
+  href="https://api.whatsapp.com/send?phone=+44%2079122%2004910%20&text=Hello"
+  className="flex items-center space-x-2 group"
+>
+  <FontAwesomeIcon icon={faWhatsapp} className="text-light-bg" />
+  <FontAwesomeIcon
+    icon={faArrowUp}
+    className="transition-transform rotate-45 group-hover:rotate-90 duration-200 text-light-bg opacity-70"
+  />
+</a>
+```
+
+✅ **Avoid Overlapping:** Positioned with enough margin to not interfere with the navbar.
+
+---
+
+## **6. Interactive & Animated Features**
+
+### **Hover Effects**
+
+✅ **Cards & Buttons:**
+
+- Glow effect (`hover:shadow-lg`).
+- Smooth transitions (`transition duration-300`).
+
+### **Animations**
+
+✅ **Floating Data Streams:**
+
+- Subtle background animation (`animation: fadeIn`).
+- Used in hero and case studies sections.  
+  ✅ **Cursor Interactivity:**
+- Slight **gold glow** following the cursor.
+
+---
+
+## **Final Notes & Best Practices**
+
+✅ **Accessibility:** High contrast, readable fonts, ARIA labels.  
+✅ **Performance:** Optimized images, minimal animation overhead.  
+✅ **Testing:** Mobile responsiveness, cross-browser testing.
