@@ -8,20 +8,11 @@ module.exports = {
         "light-base": "#ffffff",
         "dark-primary-base": "#0e1019",
         "light-bg": "#eeeeee", // New light background color
-        primary: "#4b0082",
-        "primary-light": "#b190c8",
-        "primary-hover": "#612690",
-        "dark-layer-0": "#121212",
-        "dark-layer-1": "#282828",
-        "dark-layer-2": "#3f3f3f",
-        "dark-layer-3": "#575757",
-        "dark-text-primary": "#ffffff",
-        "dark-text-secondary": "#b8b8b8",
-        "dark-text-disabled": "#757575",
-        "accent-layer-subtle": "#19131d",
-        "accent-layer-medium": "#2e2832",
-        "accent-layer-strong": "#443f48",
-        "dark-text-primary-on-light": "#333333",
+        primary: "#1B3A57", // Trust, communication
+        secondary: "#5E3A9A", // Intelligence, strategy
+        accent: "#FFD700", // Success, innovation
+        darkBg: "#121212", // Stability, security
+        textLight: "#EAEAEA", // Clarity, simplicity
       },
       fontFamily: {
         sans: ["Roobert", "Inter", "ui-sans-serif", "system-ui"], // Inter for general text
