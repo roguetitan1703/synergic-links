@@ -1,9 +1,9 @@
 import React from "react";
-import { Buttonnew } from "../components";
+import { Footer } from "../components";
 const Testakash = () => {
   return (
     <div>
-      <Buttonnew />
+      <Footer />
     </div>
   );
 };
