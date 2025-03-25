@@ -5,3 +5,5 @@ export { default as Heroien } from "./heroien.tsx";
 export { default as Footer } from "./footer.tsx";
 export { default as AnimatedBorderContainer } from "./animations/animatedBorder.tsx";
 export { default as TheatreWhere } from "./theatre.tsx";
+export { default as BreadCrumbs } from "./breadcrumbs.tsx";
+export { default as Buttonnew } from "./button";
