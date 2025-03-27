@@ -1,6 +1,11 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedin,
+  faWhatsapp,
+  faSlackHash,
+  faModx,
+} from "@fortawesome/free-brands-svg-icons";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const topBarLinks = [
@@ -12,6 +17,18 @@ const topBarLinks = [
     href: "https://api.whatsapp.com/send?phone=+44%2079122%2004910%20&text=Hellos",
     icon: faWhatsapp,
   },
+  ...(process.env.NODE_ENV === "development"
+    ? [
+        {
+          href: "/testa",
+          icon: faSlackHash,
+        },
+        {
+          href: "/testo",
+          icon: faModx,
+        },
+      ]
+    : []),
 ];
 
 const TopBar = () => {

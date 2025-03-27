@@ -27,17 +27,17 @@ const Navbar = () => {
         {
           name: "Database Development",
           description: "Custom solutions",
-          href: "/services/dev",
+          href: "/services/Database-Development",
         },
         {
           name: "Database Support",
           description: "24/7 assistance",
-          href: "/services/support",
+          href: "/services/Database-Support",
         },
         {
           name: "Security & Compliance",
           description: "Stay secure",
-          href: "/services/security",
+          href: "/services/Security-Compliance",
         },
       ],
     },
@@ -113,7 +113,7 @@ const Navbar = () => {
         </ul>
 
         {/* Right: Appointment Button */}
-        <Link to="/appointment">
+        <Link to="/contact">
           {/* <button className="bg-accent hover:bg-accent-hover text-darkBg px-4 py-2 rounded-md font-bold transition duration-300">
             Make an Appointment
           </button> */}

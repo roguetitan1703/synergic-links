@@ -20,10 +20,19 @@ const Footer = () => {
 
   const websitePages = [
     { text: "Home", href: "/" },
-    { text: "About Us", href: "/aboutus" },
-    { text: "Blogs", href: "/blogs" },
+    { text: "About Us", href: "/about" },
+    { text: "Services", href: "/services" },
     { text: "Clients", href: "/clients" },
     { text: "Contact Us", href: "/contact" },
+  ];
+
+  const servicesPages = [
+    { text: "Database Development", href: "/services/Database-Development" },
+    { text: "Database Support", href: "/services/Database-Support" },
+    {
+      text: "Database Security Compliance",
+      href: "/services/Security-Compliance",
+    },
   ];
 
   return (
@@ -71,17 +80,34 @@ const Footer = () => {
 
           {/* Center Section - Website Map */}
           <div className="w-1/3 md:w-1/3 text-center mt-6 md:mt-0">
-            <p className="mb-2 font-semibold text-accent">Website Map</p>
-            <div className="flex flex-wrap justify-center gap-4">
-              {websitePages.map((page, index) => (
-                <a
-                  key={index}
-                  href={page.href}
-                  className="text-textLight hover:text-accent transition-colors duration-200"
-                >
-                  {page.text}
-                </a>
-              ))}
+            <div>
+              <p className="mb-2 font-semibold text-accent">Website Map</p>
+              <div className="flex flex-wrap justify-center gap-4">
+                {websitePages.map((page, index) => (
+                  <a
+                    key={index}
+                    href={page.href}
+                    className="text-textLight hover:text-accent transition-colors duration-200"
+                  >
+                    {page.text}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-1">
+              <p className="mb-2 font-semibold text-accent">Services</p>
+              <div className="flex flex-wrap justify-center gap-4">
+                {servicesPages.map((page, index) => (
+                  <a
+                    key={index}
+                    href={page.href}
+                    className="text-textLight hover:text-accent transition-colors duration-200"
+                  >
+                    {page.text}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
