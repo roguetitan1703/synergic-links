@@ -9,7 +9,7 @@ const App = () => {
         <Topbar />
         <Navbar />
         <Naves />
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </BrowserRouter>
   );

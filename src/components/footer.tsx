@@ -45,10 +45,10 @@ const Footer = () => {
         </div>
       </div>
       {/* Footer Main Section */}
-      <div className="w-full relative flex justify-center h-[260px]">
-        <div className="w-2/3 relative text-white ">
+      <div className="w-full flex justify-center h-[260px]">
+        <div className="w-2/3 flex justify-between text-white">
           {/* Left Section - Logo & Contact */}
-          <div className="w-full md:w-1/3 flex flex-col items-start space-y-4 text-left absolute">
+          <div className="w-1/3 flex flex-col items-start space-y-4">
             {/* Logo */}
             <a href="/" className="flex items-center">
               <img src={loghai} alt="Logo" className="h-20 w-auto" />
@@ -70,7 +70,7 @@ const Footer = () => {
           </div>
 
           {/* Center Section - Website Map */}
-          <div className="w-full md:w-1/3 text-center mt-6 md:mt-0 absolute">
+          <div className="w-1/3 md:w-1/3 text-center mt-6 md:mt-0">
             <p className="mb-2 font-semibold text-accent">Website Map</p>
             <div className="flex flex-wrap justify-center gap-4">
               {websitePages.map((page, index) => (
@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
 
           {/* Right Section - Social Links */}
-          <div className="w-full md:w-1/3 flex flex-col items-end text-right mt-6 md:mt-0 absolute">
+          <div className="w-1/3 md:w-1/3 flex flex-col items-end text-right mt-6 md:mt-0 ">
             <p className="mb-2 font-semibold text-accent">
               Join the Conversation
             </p>
