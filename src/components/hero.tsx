@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Buttonnew } from ".";
 const heroback = require("../devdata/assets/hbackn.jpg");
 
 const HeroSection = () => {
@@ -33,9 +34,14 @@ const HeroSection = () => {
             </button>
           </Link>
           <a href="#servicesCarousel">
-            <button className="bg-transparent border-2 border-accent text-accent hover:bg-accent hover:text-darkBg font-semibold py-3 px-6 rounded-full focus:outline-none transition duration-300">
-              Explore Services
-            </button>
+            <Buttonnew
+              text={<p>Explore Services</p>}
+              round="full"
+              pxy="px-5 py-3"
+              bold={"font-semibold"}
+              border={"border-2"}
+              hovertext={"hover:text-black"}
+            />
           </a>
         </div>
 

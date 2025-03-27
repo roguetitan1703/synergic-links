@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import React from "react";
+import { Buttonnew } from ".";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState<number | null>(null);
@@ -113,9 +114,14 @@ const Navbar = () => {
 
         {/* Right: Appointment Button */}
         <Link to="/appointment">
-          <button className="bg-accent hover:bg-accent-hover text-darkBg px-4 py-2 rounded-md font-bold transition duration-300">
+          {/* <button className="bg-accent hover:bg-accent-hover text-darkBg px-4 py-2 rounded-md font-bold transition duration-300">
             Make an Appointment
-          </button>
+          </button> */}
+          <Buttonnew
+            text={<p>Make an Appointment</p>}
+            round="lg"
+            pxy="px-4 py-1"
+          />
         </Link>
       </nav>
 

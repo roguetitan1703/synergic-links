@@ -2,7 +2,3 @@ button:before {
   background-color: #ff0072;
   z-index: -1;
 }
-
-button:hover {
-  color: white;
-}

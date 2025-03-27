@@ -11,9 +11,8 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <div className="">
-        <ServicesCarousel services={services} />
-      </div>
+      <ServicesCarousel services={services} />
+
       <Process />
       <Heroien />
       <CoStar />

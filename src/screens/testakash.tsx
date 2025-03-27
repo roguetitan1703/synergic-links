@@ -1,11 +1,7 @@
 import React from "react";
-import { Footer } from "../components";
+import { Buttonnew } from "../components";
 const Testakash = () => {
-  return (
-    <div>
-      <Footer />
-    </div>
-  );
+  return <div></div>;
 };
 
 export default Testakash;

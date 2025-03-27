@@ -1,30 +1,38 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 
-const Develop = require("../devdata/assets/develop.png");
-const Deliver = require("../devdata/assets/deliver.png");
-const Design = require("../devdata/assets/design.png");
-const Research = require("../devdata/assets/research.png");
+const Planning = require("../devdata/assets/planning.png");
+const ProblemAnalysis = require("../devdata/assets/problem_analysis.png");
+const SolveProblems = require("../devdata/assets/solve_problems.png");
+const Deliver = require("../devdata/assets/deliver-to-customers.png");
 
 const steps = [
   {
-    title: "Research",
-    description: "Analyzing your data needs for optimal solutions.",
-    icon: Research,
+    number: "01",
+    title: "Planning",
+    description:
+      "We collaborate closely with you to understand your specific database needs and goals. We define clear project objectives and develop a customized strategy for optimal results.",
+    icon: Planning,
   },
   {
-    title: "Design",
-    description: "Crafting powerful and scalable data architectures.",
-    icon: Design,
+    number: "02",
+    title: "Problem Analysis",
+    description:
+      "Our skilled team meticulously assesses your existing database infrastructure. We identify any security vulnerabilities, performance bottlenecks, or compliance gaps.",
+    icon: ProblemAnalysis,
   },
   {
-    title: "Develop",
-    description: "Building high-performance, secure T-SQL solutions.",
-    icon: Develop,
+    number: "03",
+    title: "Solve Problems",
+    description:
+      "We leverage our expertise to implement robust solutions for database security, performance, and compliance. We seamlessly integrate with your existing systems for a smooth transition.",
+    icon: SolveProblems,
   },
   {
-    title: "Deliver",
-    description: "Ensuring seamless deployment and ongoing support.",
+    number: "04",
+    title: "Deliver to Customers",
+    description:
+      "We provide comprehensive documentation and training to empower your team to manage the database effectively. We offer ongoing support to ensure your database continues to operate at peak performance and adhere to regulations.",
     icon: Deliver,
   },
 ];
@@ -35,14 +43,14 @@ export default function AIProcess() {
   return (
     <section className="py-16 bg-primary text-center">
       <h3 className="text-4xl font-bold text-accent mb-8">
-        Our Work Process
-        <br />
+        Our Work Process <br />
         How We Working For our Clints or Customers
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {steps.map((step, index) => (
           <motion.div
             key={index}
+            style={{ height: 400 }}
             className="relative bg-secondary p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center overflow-hidden hover:bg-purple-hover"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -61,10 +69,15 @@ export default function AIProcess() {
               />
             </div>
 
-            <h4 className="text-2xl font-semibold text-white mb-4">
+            {/* Step Number Positioned at Top Right */}
+            <div className="absolute bottom-2 right-2 text-center justify-center items-center rounded-full h-10 w-10 bg-gray-100 text-primary font-bold">
+              <p className="p-2">{step.number}</p>
+            </div>
+
+            <h4 className="text-2xl font-semibold text-white mb-2">
               {step.title}
             </h4>
-            <div className="relative w-20 h-20">
+            <div className="relative w-auto h-[400px]">
               <motion.img
                 src={step.icon}
                 alt={step.title}

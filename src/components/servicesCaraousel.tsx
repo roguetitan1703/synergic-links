@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-
+import { Buttonnew } from ".";
 const ServicesCarousel = ({ services }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -39,29 +39,33 @@ const ServicesCarousel = ({ services }) => {
       >
         {services.map((service, index) => (
           <div
+            className="relative w-full flex-shrink-0 flex flex-col md:flex-row items-center
+                       bg-darkBg p-8 md:p-16 "
             key={index}
-            className="w-full flex-shrink-0 flex flex-col md:flex-row items-center
-                       bg-darkBg p-8 md:p-16 min-w-full"
           >
-            {/* Left Side - Text Content */}
-            <div className="md:w-1/2 md:pr-8 text-center md:text-left">
+            {/* Image */}
+            <img
+              src={service.imageSrc}
+              alt={service.heading}
+              className="w-2/3 h-auto object-cover brightness-50"
+            />
+
+            {/* Overlay Text */}
+            <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center text-white">
               <h3 className="text-3xl font-semibold text-accent mb-4">
                 {service.heading}
               </h3>
               <p className="text-base text-textLight mb-8">
                 {service.description}
               </p>
-              <button className="bg-accent hover:bg-accent-hover text-darkBg font-semibold py-3 px-8 rounded-full focus:outline-none focus:ring-2 focus:ring-accent transition-colors duration-200 shadow-md hover:shadow-lg flex items-center justify-center mx-auto md:mx-0">
-                {service.ctaText}
-                <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-              </button>
-            </div>
-            {/* Right Side - Image */}
-            <div className="md:w-1/2 mt-6 md:mt-0">
-              <img
-                src={service.imageSrc}
-                alt={service.heading}
-                className="rounded-md shadow-lg w-full h-auto object-cover"
+
+              <Buttonnew
+                text={
+                  <div>
+                    {service.ctaText}
+                    <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+                  </div>
+                }
               />
             </div>
           </div>
