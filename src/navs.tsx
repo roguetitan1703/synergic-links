@@ -8,6 +8,8 @@ export const Naves = () => {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<Aboutus />} />
       <Route path="/contact" element={<GetinTouch />} />
+      <Route path="/consultation" element={<GetinTouch active="services" />} />
+      <Route path="/partner" element={<GetinTouch active="detailed" />} />
 
       <Route path="/testa" element={<TestA />} />
       <Route path="/testo" element={<TestO />} />

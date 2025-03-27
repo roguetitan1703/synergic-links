@@ -33,12 +33,13 @@ const FormTabs = ({ categories, activeCategory, onCategoryChange }) => {
             tabIndex={0}
             data-value={category.value}
             aria-selected={activeCategory === category.value}
-            onClick={() => handleCategoryClick(category)}
+            // onClick={() => handleCategoryClick(category)}
+
             ref={(el) => (tabRefs.current[index] = el)}
             className={`form-tab-button px-4 py-2 rounded-full font-semibold transition-colors duration-200 focus:outline-none relative z-10 ${
               activeCategory === category.value
                 ? "bg-primary text-dark-text-primary shadow-lg" // Active tab styles
-                : "text-dark-text-secondary hover:text-light-base hover:bg-dark-layer-2" // Inactive tab styles
+                : "text-dark-text-secondary hover:text-light-base hover:bg-dark-layer-2 hover:cursor-not-allowed" // Inactive tab styles
             }`}
           >
             {category.label}

@@ -8,14 +8,14 @@ const Breadcrumbs = () => {
   const pathnames = location.pathname.split("/").filter((x) => x);
 
   return (
-    <nav className="flex items-center space-x-2 text-sm text-gray-500">
-      <Link to="/" className="hover:text-gray-700">
+    <nav className="flex items-center space-x-2 text-sm text-textLight">
+      <Link to="/" className="hover:text-accent font-medium">
         Home
       </Link>
       {pathnames.length > 0 && (
         <FontAwesomeIcon
           icon={faChevronRight}
-          className="w-4 h-4 text-gray-400"
+          className="w-4 h-4 text-gray-500"
         />
       )}
       {pathnames.map((value, index) => {
@@ -25,8 +25,8 @@ const Breadcrumbs = () => {
           <div key={to} className="flex items-center space-x-2">
             <Link
               to={to}
-              className={`hover:text-gray-700 ${
-                isLast ? "text-gray-700 font-medium" : ""
+              className={`hover:text-accent transition-colors duration-300 ${
+                isLast ? "text-accent font-semibold" : "text-textLight"
               }`}
             >
               {value.charAt(0).toUpperCase() + value.slice(1)}
@@ -34,7 +34,7 @@ const Breadcrumbs = () => {
             {!isLast && (
               <FontAwesomeIcon
                 icon={faChevronRight}
-                className="w-4 h-4 text-gray-400"
+                className="w-4 h-4 text-gray-500"
               />
             )}
           </div>

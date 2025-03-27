@@ -50,9 +50,9 @@ const Footer = () => {
           {/* Left Section - Logo & Contact */}
           <div className="w-1/3 flex flex-col items-start space-y-4">
             {/* Logo */}
-            <a href="/" className="flex items-center">
-              <img src={loghai} alt="Logo" className="h-20 w-auto" />
-            </a>
+            <div className="text-2xl font-bold mt-10">
+              <span className="text-accent">Synergic</span>Links
+            </div>
             {/* Contact Section */}
             <div>
               <p className="font-semibold text-accent">Contact Us</p>

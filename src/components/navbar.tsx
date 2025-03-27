@@ -136,6 +136,7 @@ const Navbar = () => {
               <Link
                 key={i}
                 to={link.href}
+                onClick={() => setOpenMenu(null)}
                 className="group flex items-center gap-4 p-3 pl-6 transition duration-300 hover:bg-darkBg hover:scale-105 rounded-md"
               >
                 {/* Vertical accent bar */}

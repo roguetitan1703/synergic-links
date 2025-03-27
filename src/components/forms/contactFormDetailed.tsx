@@ -1,144 +1,135 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-
+import { Buttonnew } from "..";
 const ContactFormDetailed = () => {
   return (
-    <div className="rounded-xl bg-dark-layer-1/10 p-8 max-w-5xl md:p-12 w-full mx-auto">
-      {" "}
-      {/* Removed max-w-xl, Updated background */}
-      <h2 className="text-3xl font-semibold text-dark-text-primary mb-6 text-center">
+    <div className="rounded-2xl bg-secondary p-12 max-w-4xl w-full mx-auto shadow-lg">
+      <h2 className="text-4xl font-bold text-accent mb-6 text-center">
         Detailed Inquiry Form
       </h2>
-      <p className="text-dark-text-secondary text-center mb-10">
+      <p className="text-white mb-8 text-center">
         Provide detailed information for a tailored response.
       </p>
       <form className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {" "}
-          {/* Two inputs in a row for Full Name and Email */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label
-              htmlFor="fullNameDetailed"
-              className="block text-sm font-semibold text-dark-text-secondary mb-1 text-left"
+              htmlFor="fullName"
+              className="block text-sm font-medium text-white mb-2"
             >
-              FULL NAME
+              Full Name
             </label>
             <input
               type="text"
-              id="fullNameDetailed"
+              id="fullName"
               placeholder="Enter your full name"
-              className="w-full px-4 py-3 rounded-full bg-dark-layer-2 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-primary border-none"
+              className="w-full px-5 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-gray-600"
             />
           </div>
           <div>
             <label
-              htmlFor="emailAddressDetailed"
-              className="block text-sm font-semibold text-dark-text-secondary mb-1 text-left"
+              htmlFor="email"
+              className="block text-sm font-medium text-white mb-2"
             >
-              EMAIL ADDRESS
+              Email Address
             </label>
             <input
               type="email"
-              id="emailAddressDetailed"
+              id="email"
               placeholder="Email Address"
-              className="w-full px-4 py-3 rounded-full bg-dark-layer-2 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-primary border-none"
+              className="w-full px-5 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-gray-600"
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {" "}
-          {/* Two inputs in a row for Phone and Company */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label
-              htmlFor="phoneNumberDetailed"
-              className="block text-sm font-semibold text-dark-text-secondary mb-1 text-left"
+              htmlFor="phone"
+              className="block text-sm font-medium text-white mb-2"
             >
-              PHONE NUMBER
+              Phone Number
             </label>
             <input
               type="tel"
-              id="phoneNumberDetailed"
+              id="phone"
               placeholder="Enter your number"
-              className="w-full px-4 py-3 rounded-full bg-dark-layer-2 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-primary border-none"
+              className="w-full px-5 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-gray-600"
             />
           </div>
           <div>
             <label
-              htmlFor="companyNameDetailed"
-              className="block text-sm font-semibold text-dark-text-secondary mb-1 text-left"
+              htmlFor="company"
+              className="block text-sm font-medium text-white mb-2"
             >
-              COMPANY NAME
+              Company Name
             </label>
             <input
               type="text"
-              id="companyNameDetailed"
+              id="company"
               placeholder="Enter your company name"
-              className="w-full px-4 py-3 rounded-full bg-dark-layer-2 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-primary border-none"
+              className="w-full px-5 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-gray-600"
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {" "}
-          {/* Two inputs in a row for Official Email and Country */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label
-              htmlFor="officialEmailDetailed"
-              className="block text-sm font-semibold text-dark-text-secondary mb-1 text-left"
+              htmlFor="officialEmail"
+              className="block text-sm font-medium text-white mb-2"
             >
-              OFFICIAL EMAIL
+              Official Email
             </label>
             <input
               type="email"
-              id="officialEmailDetailed"
-              placeholder="Enter your Official Email"
-              className="w-full px-4 py-3 rounded-full bg-dark-layer-2 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-primary border-none"
+              id="officialEmail"
+              placeholder="Enter your official email"
+              className="w-full px-5 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-gray-600"
             />
           </div>
           <div>
             <label
-              htmlFor="countryDetailed"
-              className="block text-sm font-semibold text-dark-text-secondary mb-1 text-left"
+              htmlFor="country"
+              className="block text-sm font-medium text-white mb-2"
             >
-              SELECT COUNTRY
+              Select Country
             </label>
             <select
-              id="countryDetailed"
-              className="w-full px-4 py-3 rounded-full bg-dark-layer-2 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-primary border-none appearance-none"
+              id="country"
+              className="w-full px-5 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-gray-600 appearance-none"
             >
               <option value="">Select Country</option>
-              {/* Add country options here */}
               <option value="us">United States</option>
               <option value="ca">Canada</option>
-              {/* ... more options ... */}
             </select>
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-1">
-          {" "}
-          {/* More Details on its own line */}
-          <div>
-            <label
-              htmlFor="moreDetailsDetailed"
-              className="block text-sm font-semibold text-dark-text-secondary mb-1 text-left"
-            >
-              MORE DETAILS
-            </label>
-            <textarea
-              id="moreDetailsDetailed"
-              placeholder="More Details"
-              rows="5"
-              className="w-full px-4 py-3 rounded-xl bg-dark-layer-2 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-primary border-none resize-none"
-            ></textarea>
-          </div>
+        <div>
+          <label
+            htmlFor="moreDetails"
+            className="block text-sm font-medium text-white mb-2"
+          >
+            More Details
+          </label>
+          <textarea
+            id="moreDetails"
+            placeholder="Provide more details"
+            rows="5"
+            className="w-full px-5 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-gray-600 resize-none"
+          ></textarea>
         </div>
-
-        <button
-          type="submit"
-          className="bg-primary hover:bg-primary-light text-dark-text-primary font-semibold py-3 px-10 rounded-full focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-200 shadow-md hover:shadow-lg block mx-auto flex items-center justify-center"
-        >
-          Submit <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-        </button>
+        <Buttonnew
+          text={
+            <p>
+              Submit
+              <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+            </p>
+          }
+          round="lg"
+          hovertext="hover:text-black"
+          pxy="px-8 py-3"
+          border="border-2"
+        />
       </form>
     </div>
   );

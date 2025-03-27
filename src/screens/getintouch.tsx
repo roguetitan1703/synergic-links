@@ -4,17 +4,20 @@ import ContactFormBasic from "../components/forms/contactFormBasic.tsx";
 import ContactFormServices from "../components/forms/contactFormServices.tsx";
 import ContactFormDetailed from "../components/forms/contactFormDetailed.tsx";
 import AnimatedBorderContainer from "../components/animations/animatedBorder.tsx";
-
+import { BreadCrumbs } from "../components/index.js";
 const formCategories = [
   { label: "Contact Us", value: "basic" },
   { label: "Schedule Complementary Consultation", value: "services" },
   { label: "Sign Up as Partner", value: "detailed" },
 ];
 
-const GetInTouch = () => {
-  const [activeFormCategory, setActiveFormCategory] = useState("basic");
+const GetInTouch = ({ active = "basic" }) => {
+  const [activeFormCategory, setActiveFormCategory] = useState(active);
   const [formContent, setFormContent] = useState(renderForm("basic")); // Initialize form content
   const [_, setTransitioning] = useState(false); // State to control transition
+  useEffect(() => {
+    setActiveFormCategory(active);
+  }, [active]);
 
   useEffect(() => {
     setFormContent(renderForm(activeFormCategory));
@@ -48,7 +51,8 @@ const GetInTouch = () => {
   };
 
   return (
-    <section className="bg-dark-layer-0 py-20">
+    <section className="bg-dark-layer-0 py-20 px-6  ">
+      <BreadCrumbs />
       {/* Increased py for more vertical spacing */}
       <div className="container mx-auto px-6 text-center">
         <div className="min-h-screen">

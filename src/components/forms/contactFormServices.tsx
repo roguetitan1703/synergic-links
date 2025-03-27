@@ -1,100 +1,111 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Buttonnew } from "..";
 
 const ContactFormServices = () => {
   return (
-    <div className="rounded-xl bg-dark-layer-1/10 p-8 max-w-5xl md:p-12 w-full mx-auto">
-      {" "}
-      {/* Removed max-w-xl, Updated background */}
-      <h2 className="text-3xl font-semibold text-dark-text-primary mb-6 text-center">
+    <div className="rounded-xl bg-secondary p-10 max-w-4xl w-full mx-auto shadow-lg">
+      <h2 className="text-4xl font-bold text-accent mb-6 text-center tracking-wide">
         Inquire About Services
       </h2>
-      <p className="text-dark-text-secondary text-center mb-10">
-        Let us know your needs.
+      <p className="text-white mb-8 text-center text-lg">
+        Let us know your needs, and we will get back to you promptly.
       </p>
       <form className="space-y-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {" "}
-          {/* Two inputs in a row for Full Name and Email */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label
               htmlFor="fullName"
-              className="block text-sm font-semibold text-dark-text-secondary mb-1 text-left"
+              className="block text-sm font-semibold text-white mb-2"
             >
-              FULL NAME
+              Full Name
             </label>
             <input
               type="text"
               id="fullName"
               placeholder="Enter your full name"
-              className="w-full px-4 py-3 rounded-full bg-dark-layer-2 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-primary border-none"
+              className="w-full px-4 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-secondary"
+              required
             />
           </div>
           <div>
             <label
               htmlFor="emailAddress"
-              className="block text-sm font-semibold text-dark-text-secondary mb-1 text-left"
+              className="block text-sm font-semibold text-white mb-2"
             >
-              EMAIL ADDRESS
+              Email Address
             </label>
             <input
               type="email"
               id="emailAddress"
               placeholder="Email Address"
-              className="w-full px-4 py-3 rounded-full bg-dark-layer-2 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-primary border-none"
+              className="w-full px-4 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-secondary"
+              required
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {" "}
-          {/* Two inputs in a row for Company and Phone */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label
-              htmlFor="companyName"
-              className="block text-sm font-semibold text-dark-text-secondary mb-1 text-left"
+              htmlFor="fullName"
+              className="block text-sm font-semibold text-white mb-2"
             >
-              COMPANY NAME
+              Company Name
             </label>
             <input
               type="text"
               id="companyName"
-              placeholder="Enter your company name"
-              className="w-full px-4 py-3 rounded-full bg-dark-layer-2 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-primary border-none"
+              placeholder="Enter your Company name"
+              className="w-full px-4 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-secondary"
+              required
             />
           </div>
           <div>
             <label
               htmlFor="phoneNumber"
-              className="block text-sm font-semibold text-dark-text-secondary mb-1 text-left"
+              className="block text-sm font-semibold text-white mb-2"
             >
-              PHONE NUMBER
+              Phone Number
             </label>
             <input
-              type="tel"
+              type="text"
               id="phoneNumber"
-              placeholder="Enter your number"
-              className="w-full px-4 py-3 rounded-full bg-dark-layer-2 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-primary border-none"
+              placeholder="Phone Number"
+              className="w-full px-4 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-secondary"
+              required
             />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-1">
-          {" "}
-          {/* Company Address on its own line */}
-          <div>
-            <label
-              htmlFor="companyAddress"
-              className="block text-sm font-semibold text-dark-text-secondary mb-1 text-left"
-            >
-              COMPANY ADDRESS
-            </label>
-            <textarea
-              id="companyAddress"
-              placeholder="Company Address"
-              rows="5"
-              className="w-full px-4 py-3 rounded-xl bg-dark-layer-2 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-primary border-none resize-none"
-            ></textarea>
-          </div>
+        <div>
+          <label
+            htmlFor="companyAddress"
+            className="block text-sm font-semibold text-white mb-2"
+          >
+            Company Address
+          </label>
+          <textarea
+            id="companyAddress"
+            placeholder="Type your Company Address here..."
+            rows="5"
+            className="w-full px-4 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-secondary resize-none"
+            required
+          ></textarea>
+        </div>
+        <div>
+          <label
+            htmlFor="message"
+            className="block text-sm font-semibold text-white mb-2"
+          >
+            Message
+          </label>
+          <textarea
+            id="message"
+            placeholder="Type your message here..."
+            rows="5"
+            className="w-full px-4 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-secondary resize-none"
+            required
+          ></textarea>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-4">
           {" "}
@@ -178,30 +189,18 @@ const ContactFormServices = () => {
             <span className="ml-2">Audit High Availability & DR Solution</span>
           </label>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-1">
-          {" "}
-          {/* Message on its own line */}
-          <div>
-            <label
-              htmlFor="messageServices"
-              className="block text-sm font-semibold text-dark-text-secondary mb-1 text-left"
-            >
-              MESSAGE
-            </label>
-            <textarea
-              id="messageServices"
-              placeholder="Type Your Message"
-              rows="5"
-              className="w-full px-4 py-3 rounded-xl bg-dark-layer-2 text-dark-text-primary focus:outline-none focus:ring-2 focus:ring-primary border-none resize-none"
-            ></textarea>
-          </div>
-        </div>
-        <button
-          type="submit"
-          className="bg-primary hover:bg-primary-light text-dark-text-primary font-semibold py-3 px-10 rounded-full focus:outline-none focus:ring-2 focus:ring-primary transition-colors duration-200 shadow-md hover:shadow-lg block mx-auto flex items-center justify-center"
-        >
-          Submit <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-        </button>
+        <Buttonnew
+          text={
+            <p>
+              Submit
+              <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+            </p>
+          }
+          round="lg"
+          hovertext="hover:text-black"
+          pxy="px-8 py-3"
+          border="border-2"
+        />
       </form>
     </div>
   );

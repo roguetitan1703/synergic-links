@@ -6,7 +6,7 @@ import {
   faShieldAlt,
   faCogs,
 } from "@fortawesome/free-solid-svg-icons";
-
+import { BreadCrumbs } from "../components";
 const sections = [
   {
     title: "Database Development Services",
@@ -49,8 +49,9 @@ const steps = [
 
 const About = () => {
   return (
-    <div className="bg-gray-900 text-white min-h-screen py-16 px-6 md:px-12 pt-[180px]">
+    <div className="bg-gray-900 text-white min-h-screen py-16 px-6 md:px-12 ">
       {/* Heading */}
+      <BreadCrumbs />
       <motion.h2
         className="text-4xl font-extrabold text-center mb-12 text-purple-400"
         initial={{ opacity: 0, y: -50 }}

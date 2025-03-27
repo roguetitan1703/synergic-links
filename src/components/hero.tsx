@@ -46,7 +46,7 @@ const HeroSection = () => {
         </div>
 
         {/* Quick Service Tags */}
-        <div className="mt-8 flex flex-wrap justify-center space-x-4 text-sm">
+        <div className="mt-8 flex flex-wrap justify-center space-x-4 text-sm bg-darkBg">
           <span className="text-accent border-l-2 border-accent pl-2">
             Database Dev
           </span>
@@ -56,7 +56,7 @@ const HeroSection = () => {
           <span className="text-accent border-l-2 border-accent pl-2">
             Performance Optimization
           </span>
-          <span className="text-accent border-l-2 border-accent pl-2">
+          <span className="text-accent border-l-2 border-r-2 border-accent px-2">
             Cloud Integrations
           </span>
         </div>
