@@ -6,7 +6,7 @@ export const Naves = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/aboutus" element={<Aboutus />} />
+      <Route path="/about" element={<Aboutus />} />
       <Route path="/contact" element={<GetinTouch />} />
 
       <Route path="/testa" element={<TestA />} />

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+const heroback = require("../devdata/assets/hbackn.jpg");
 
 const HeroSection = () => {
   return (
@@ -7,7 +8,7 @@ const HeroSection = () => {
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center animate-fadeIn"
-        style={{ backgroundImage: "url('/images/hero-bg.jpg')" }} // Replace with your image path
+        style={{ backgroundImage: `url(${heroback})` }}
       ></div>
 
       {/* Content */}
