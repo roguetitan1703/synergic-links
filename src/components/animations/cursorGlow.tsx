@@ -4,7 +4,7 @@ import React from "react";
 
 const CursorGlow = () => {
   return (
-    <div className="z-9999">
+    <div className="relative z-50">
       <MouseTrail
         // strokeColor={"#FF8541"}
         strokeColor={"#DAA520"} // Deep Gold

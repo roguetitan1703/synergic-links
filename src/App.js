@@ -6,7 +6,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <CursorGlow />
-      <div className="font-sans">
+      <div className="font-sans z-10 relative">
         <Topbar />
         <Navbar />
         <Naves />
