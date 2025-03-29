@@ -7,7 +7,7 @@ const CursorGlow = () => {
     <div className="z-9999">
       <MouseTrail
         // strokeColor={"#FF8541"}
-        strokeColor={"#DAA520"} // Deep Gold
+        strokeColor={"#FFD700"} // Deep Gold
         // lag={0.85}
         // lineDuration={1000}
         lineWidthStart={10}

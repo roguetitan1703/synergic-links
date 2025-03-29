@@ -46,7 +46,7 @@ const HeroSection = () => {
         </div>
 
         {/* Quick Service Tags */}
-        <div className="mt-8 flex flex-wrap justify-center space-x-4 text-sm bg-darkBg">
+        <div className="mt-8 flex flex-wrap justify-center space-x-4 text-sm bg-darkBg/30 py-2 px-4 rounded-xl">
           <span className="text-accent border-l-2 border-accent pl-2">
             Database Dev
           </span>
