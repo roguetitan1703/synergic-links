@@ -2,7 +2,7 @@ import React from "react";
 
 const AnimatedBorderContainer = ({
   children,
-  colorgrad = "bg-[conic-gradient(#4b0082_20deg,transparent_120deg)]",
+  colorgrad = "bg-[conic-gradient(#ffffff_20deg,transparent_120deg)]",
 }) => {
   return (
     <div className="relative z-10 flex w-full cursor-pointer items-center overflow-hidden rounded-xl p-[5px]">
