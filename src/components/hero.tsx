@@ -31,23 +31,22 @@ const HeroSection = () => {
       </video>
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <div className="bg-darkBg/80 backdrop-blur-sm p-8 rounded-xl shadow-2xl animate-float max-w-5xl">
+        <div className="bg-darkBg/80 backdrop-blur-sm p-8 rounded-xl shadow-2xl animate-float max-w-5xl ">
           {/* Optional Tag/Pill */}
           <div className="bg-accent text-darkBg font-bold px-4 py-1 rounded-full text-sm inline-block mb-4">
             Enterprise-Grade Solutions
           </div>
-
-          <h1 className="text-3xl md:text-5xl font-bold text-textLight max-w-4xl leading-snug mb-4">
-            Empowering Digital Transformation with Expert Database Engineering
+          <h1 className="text-3xl md:text-5xl font-bold text-textLight max-w-4xl leading-snug mb-4 mx-auto">
+            Unlock the Power of Data with Precision & Security
           </h1>
-          <p className="text-textLight text-base md:text-lg max-w-2xl mb-8">
+          <p className="text-textLight text-base md:text-lg max-w-2xl mb-8 mx-auto">
             Scalable, Secure, and Smart Database Solutions for Your Business
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-row justify-evenly items-center">
+          <div className="flex flex-row justify-center gap-10 items-center">
             <Link to="/contact">
-              <button className="bg-accent hover:bg-accent-hover text-darkBg font-semibold py-3 px-6 rounded-full focus:outline-none transition duration-300">
+              <button className="bg-accent hover:bg-accent-hover text-darkBg font-semibold py-3.5 px-11 rounded-full focus:outline-none transition duration-300">
                 Get Started
               </button>
             </Link>
@@ -64,7 +63,7 @@ const HeroSection = () => {
           </div>
 
           {/* Quick Service Tags */}
-          <div className="mt-8 flex flex-wrap justify-center space-x-4 text-sm bg-darkBg/30 py-2 px-4 rounded-xl">
+          <div className="mt-8 flex flex-wrap justify-center space-x-4 text-sm py-2 px-4 rounded-xl">
             <span className="text-accent border-l-2 border-accent pl-2">
               Database Dev
             </span>

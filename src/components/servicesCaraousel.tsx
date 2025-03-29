@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Buttonnew } from ".";
+import { Link } from "react-router-dom";
 const ServicesCarousel = ({ services }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -58,15 +59,19 @@ const ServicesCarousel = ({ services }) => {
               <p className="text-base text-textLight mb-8">
                 {service.description}
               </p>
-
-              <Buttonnew
-                text={
-                  <div>
-                    {service.ctaText}
-                    <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
-                  </div>
-                }
-              />
+              <Link
+                to={service.link}
+                onClick={() => window.scrollTo({ top: 0 })}
+              >
+                <Buttonnew
+                  text={
+                    <div>
+                      {service.ctaText}
+                      <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
+                    </div>
+                  }
+                />
+              </Link>
             </div>
           </div>
         ))}
