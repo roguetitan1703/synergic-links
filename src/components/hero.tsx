@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Buttonnew } from ".";
 const heroback = require("../devdata/assets/hbackn.jpg");
+
 const HeroSection = () => {
   return (
     <section className="relative w-full h-screen overflow-hidden">
@@ -30,7 +31,7 @@ const HeroSection = () => {
       </video>
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <div className="bg-darkBg/80 backdrop-blur-sm p-8 rounded-xl shadow-2xl animate-float max-w-4xl">
+        <div className="bg-darkBg/80 backdrop-blur-sm p-8 rounded-xl shadow-2xl animate-float max-w-5xl">
           {/* Optional Tag/Pill */}
           <div className="bg-accent text-darkBg font-bold px-4 py-1 rounded-full text-sm inline-block mb-4">
             Enterprise-Grade Solutions
@@ -44,7 +45,7 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex space-x-4">
+          <div className="flex flex-row justify-evenly items-center">
             <Link to="/contact">
               <button className="bg-accent hover:bg-accent-hover text-darkBg font-semibold py-3 px-6 rounded-full focus:outline-none transition duration-300">
                 Get Started
@@ -62,23 +63,23 @@ const HeroSection = () => {
             </a>
           </div>
 
-        {/* Quick Service Tags */}
-        <div className="mt-8 flex flex-wrap justify-center space-x-4 text-sm bg-darkBg/30 py-2 px-4 rounded-xl">
-          <span className="text-accent border-l-2 border-accent pl-2">
-            Database Dev
-          </span>
-          <span className="text-accent border-l-2 border-accent pl-2">
-            Security & Compliance
-          </span>
-          <span className="text-accent border-l-2 border-accent pl-2">
-            Performance Optimization
-          </span>
-          <span className="text-accent border-l-2 border-r-2 border-accent px-2">
-            Cloud Integrations
-          </span>
+          {/* Quick Service Tags */}
+          <div className="mt-8 flex flex-wrap justify-center space-x-4 text-sm bg-darkBg/30 py-2 px-4 rounded-xl">
+            <span className="text-accent border-l-2 border-accent pl-2">
+              Database Dev
+            </span>
+            <span className="text-accent border-l-2 border-accent pl-2">
+              Security & Compliance
+            </span>
+            <span className="text-accent border-l-2 border-accent pl-2">
+              Performance Optimization
+            </span>
+            <span className="text-accent border-l-2 border-r-2 border-accent px-2">
+              Cloud Integrations
+            </span>
+          </div>
         </div>
       </div>
-
       {/* Subtle Animations */}
       <style>{`
         @keyframes fadeIn {
