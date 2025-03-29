@@ -44,7 +44,7 @@ export default function AIProcess() {
     <section className="py-16 bg-primary text-center">
       <h3 className="text-4xl font-bold text-accent mb-8">
         Our Work Process <br />
-        How We Working For our Clints or Customers
+        How We Working For our Clients or Customers
       </h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {steps.map((step, index) => (

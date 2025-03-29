@@ -81,7 +81,7 @@ const Navbar = () => {
   return (
     <div className="relative">
       {/* NAVBAR */}
-      <nav className="bg-gradient-to-r from-primary to-secondary text-textLight py-4 px-6 flex justify-between items-center shadow-md">
+      <nav className="bg-gradient-to-r from-primary to-secondary text-textLight py-2 px-6 flex justify-between items-center shadow-md">
         {/* Left: Logo */}
         <div className="text-2xl font-bold">
           <span className="text-accent">Synergic</span>Links

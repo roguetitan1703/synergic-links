@@ -62,6 +62,10 @@ module.exports = {
           "0%": { transform: "rotate(0deg) scale(10)" },
           "100%": { transform: "rotate(-360deg) scale(10)" },
         },
+        "bounce-horizontal": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(10px)" },
+        },
       },
 
       animation: {
@@ -70,6 +74,7 @@ module.exports = {
         rotate: "rotate 12s linear infinite",
         gradient: "animatedgradient 4s ease infinite alternate",
         beat: "beat 1s infinite alternate",
+        "bounce-horizontal": "bounce-horizontal 1s ease-in-out infinite",
         // rotate: "rotate 12s linear infinite",
         // flicker: "flicker 1s infinite",
       },
