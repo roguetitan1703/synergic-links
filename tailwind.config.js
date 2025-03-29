@@ -54,14 +54,19 @@ module.exports = {
           "50%": { boxShadow: "0 0 10px #FFD700" },
           "100%": { boxShadow: "0 0 0px #FFD700" },
         },
+        rotate: {
+          "0%": { transform: "rotate(0deg) scale(10)" },
+          "100%": { transform: "rotate(-360deg) scale(10)" },
+        },
       },
 
       animation: {
         fadeIn: "fadeIn 0.5s ease-in-out",
         glow: "glow 1.5s ease-in-out infinite",
+        rotate: "rotate 3s linear infinite",
         gradient: "animatedgradient 4s ease infinite alternate",
         beat: "beat 1s infinite alternate",
-        rotate: "rotate 12s linear infinite",
+        // rotate: "rotate 12s linear infinite",
         // flicker: "flicker 1s infinite",
       },
 

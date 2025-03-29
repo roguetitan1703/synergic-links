@@ -72,7 +72,7 @@ const ContactFormBasic = () => {
         <Buttonnew
           text={
             <p>
-              Submit
+              Send Inquiry Now
               <FontAwesomeIcon icon={faArrowRight} className="ml-2" />
             </p>
           }
