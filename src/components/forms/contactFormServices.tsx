@@ -5,7 +5,7 @@ import { Buttonnew } from "..";
 
 const ContactFormServices = () => {
   return (
-    <div className="rounded-xl bg-secondary p-10 max-w-4xl w-full mx-auto shadow-lg">
+    <div className="rounded-lg bg-secondary p-10 w-full mx-auto shadow-lg">
       <h2 className="text-4xl font-bold text-accent mb-6 text-center tracking-wide">
         Inquire About Services
       </h2>
@@ -17,7 +17,7 @@ const ContactFormServices = () => {
           <div>
             <label
               htmlFor="fullName"
-              className="block text-sm font-semibold text-white mb-2"
+              className="block text-left text-sm font-semibold text-white mb-2"
             >
               Full Name
             </label>
@@ -32,7 +32,7 @@ const ContactFormServices = () => {
           <div>
             <label
               htmlFor="emailAddress"
-              className="block text-sm font-semibold text-white mb-2"
+              className="block text-left text-sm font-semibold text-white mb-2"
             >
               Email Address
             </label>
@@ -49,7 +49,7 @@ const ContactFormServices = () => {
           <div>
             <label
               htmlFor="fullName"
-              className="block text-sm font-semibold text-white mb-2"
+              className="block text-left text-sm font-semibold text-white mb-2"
             >
               Company Name
             </label>
@@ -64,7 +64,7 @@ const ContactFormServices = () => {
           <div>
             <label
               htmlFor="phoneNumber"
-              className="block text-sm font-semibold text-white mb-2"
+              className="block text-left text-sm font-semibold text-white mb-2"
             >
               Phone Number
             </label>
@@ -80,14 +80,14 @@ const ContactFormServices = () => {
         <div>
           <label
             htmlFor="companyAddress"
-            className="block text-sm font-semibold text-white mb-2"
+            className="block text-left text-sm font-semibold text-white mb-2"
           >
             Company Address
           </label>
           <textarea
             id="companyAddress"
             placeholder="Type your Company Address here..."
-            rows="5"
+            rows={5}
             className="w-full px-4 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-secondary resize-none"
             required
           ></textarea>
@@ -95,14 +95,14 @@ const ContactFormServices = () => {
         <div>
           <label
             htmlFor="message"
-            className="block text-sm font-semibold text-white mb-2"
+            className="block text-left text-sm font-semibold text-white mb-2"
           >
             Message
           </label>
           <textarea
             id="message"
             placeholder="Type your message here..."
-            rows="5"
+            rows={5}
             className="w-full px-4 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-secondary resize-none"
             required
           ></textarea>

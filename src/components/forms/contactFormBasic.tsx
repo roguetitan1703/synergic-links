@@ -2,9 +2,10 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Buttonnew } from "..";
+
 const ContactFormBasic = () => {
   return (
-    <div className="rounded-2xl bg-secondary p-12 max-w-4xl w-full mx-auto shadow-lg">
+    <div className="rounded-lg bg-secondary p-12 w-full mx-auto shadow-lg">
       <h2 className="text-4xl font-bold text-accent mb-6 text-center">
         Leave a Message
       </h2>
@@ -14,7 +15,7 @@ const ContactFormBasic = () => {
           <div>
             <label
               htmlFor="firstName"
-              className="block text-sm font-medium text-white mb-2"
+              className="block text-sm font-medium text-white mb-2 text-left"
             >
               First Name
             </label>
@@ -28,7 +29,7 @@ const ContactFormBasic = () => {
           <div>
             <label
               htmlFor="lastName"
-              className="block text-sm font-medium text-white mb-2"
+              className="block text-sm font-medium text-white mb-2 text-left"
             >
               Last Name
             </label>
@@ -43,7 +44,7 @@ const ContactFormBasic = () => {
         <div>
           <label
             htmlFor="email"
-            className="block text-sm font-medium text-white mb-2"
+            className="block text-sm font-medium text-white mb-2 text-left"
           >
             Email
           </label>
@@ -57,14 +58,14 @@ const ContactFormBasic = () => {
         <div>
           <label
             htmlFor="message"
-            className="block text-sm font-medium text-white mb-2"
+            className="block text-sm font-medium text-white mb-2 text-left"
           >
             Message
           </label>
           <textarea
             id="message"
             placeholder="Message us"
-            rows="5"
+            rows={5}
             className="w-full px-5 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-gray-600 resize-none"
           ></textarea>
         </div>

@@ -3,6 +3,10 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      zIndex: {
+        9999: "9999", // Custom z-index
+      },
+
       colors: {
         // The final color palette:
         primary: "#1B3A57", // Deep Blue → Trust, Communication
@@ -63,7 +67,7 @@ module.exports = {
       animation: {
         fadeIn: "fadeIn 0.5s ease-in-out",
         glow: "glow 1.5s ease-in-out infinite",
-        rotate: "rotate 3s linear infinite",
+        rotate: "rotate 12s linear infinite",
         gradient: "animatedgradient 4s ease infinite alternate",
         beat: "beat 1s infinite alternate",
         // rotate: "rotate 12s linear infinite",

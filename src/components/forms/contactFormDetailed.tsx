@@ -4,7 +4,7 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { Buttonnew } from "..";
 const ContactFormDetailed = () => {
   return (
-    <div className="rounded-2xl bg-secondary p-12 max-w-4xl w-full mx-auto shadow-lg">
+    <div className="rounded-lg bg-secondary p-12 w-full mx-auto shadow-lg">
       <h2 className="text-4xl font-bold text-accent mb-6 text-center">
         Detailed Inquiry Form
       </h2>
@@ -16,7 +16,7 @@ const ContactFormDetailed = () => {
           <div>
             <label
               htmlFor="fullName"
-              className="block text-sm font-medium text-white mb-2"
+              className="block text-left text-sm font-medium text-white mb-2"
             >
               Full Name
             </label>
@@ -30,7 +30,7 @@ const ContactFormDetailed = () => {
           <div>
             <label
               htmlFor="email"
-              className="block text-sm font-medium text-white mb-2"
+              className="block text-left text-sm font-medium text-white mb-2"
             >
               Email Address
             </label>
@@ -46,7 +46,7 @@ const ContactFormDetailed = () => {
           <div>
             <label
               htmlFor="phone"
-              className="block text-sm font-medium text-white mb-2"
+              className="block text-left text-sm font-medium text-white mb-2"
             >
               Phone Number
             </label>
@@ -60,7 +60,7 @@ const ContactFormDetailed = () => {
           <div>
             <label
               htmlFor="company"
-              className="block text-sm font-medium text-white mb-2"
+              className="block text-left text-sm font-medium text-white mb-2"
             >
               Company Name
             </label>
@@ -76,7 +76,7 @@ const ContactFormDetailed = () => {
           <div>
             <label
               htmlFor="officialEmail"
-              className="block text-sm font-medium text-white mb-2"
+              className="block text-left text-sm font-medium text-white mb-2"
             >
               Official Email
             </label>
@@ -90,7 +90,7 @@ const ContactFormDetailed = () => {
           <div>
             <label
               htmlFor="country"
-              className="block text-sm font-medium text-white mb-2"
+              className="block text-left text-sm font-medium text-white mb-2"
             >
               Select Country
             </label>
@@ -107,14 +107,14 @@ const ContactFormDetailed = () => {
         <div>
           <label
             htmlFor="moreDetails"
-            className="block text-sm font-medium text-white mb-2"
+            className="block text-left text-sm font-medium text-white mb-2"
           >
             More Details
           </label>
           <textarea
             id="moreDetails"
             placeholder="Provide more details"
-            rows="5"
+            rows={5}
             className="w-full px-5 py-3 rounded-lg bg-background text-text focus:outline-none focus:ring-2 focus:ring-accent border border-gray-600 resize-none"
           ></textarea>
         </div>

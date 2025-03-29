@@ -1,10 +1,11 @@
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import { Naves } from "./navs.tsx";
-import { Footer, Navbar, Topbar } from "./components/index.js";
+import { Footer, Navbar, Topbar, CursorGlow } from "./components/index.js";
 const App = () => {
   return (
     <BrowserRouter>
+      <CursorGlow />
       <div className="font-sans">
         <Topbar />
         <Navbar />
