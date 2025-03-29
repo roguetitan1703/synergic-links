@@ -12,7 +12,7 @@ const ServicesCarousel = ({ services }) => {
     if (isPaused) return;
     const interval = setInterval(() => {
       goToNextSlide();
-    }, 5000);
+    }, 3000);
     return () => clearInterval(interval);
   }, [currentSlide, isPaused]);
 
@@ -131,7 +131,7 @@ const ServicesCarousel = ({ services }) => {
           }
         }
         .animate-slideDown {
-          animation: slideDown 0.3s ease-out forwards;
+          animation: slideDown 1s ease-out forwards;
         }
       `}</style>
     </div>
