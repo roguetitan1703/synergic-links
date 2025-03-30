@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import React, { useState } from "react";
 
 const Planning = require("../devdata/assets/planning.png");
@@ -54,7 +54,11 @@ export default function AIProcess() {
             className="relative bg-secondary p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col items-center overflow-hidden hover:bg-purple-hover"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
+            transition={{
+              duration: 0.6,
+              delay: index * 0.2,
+              ease: "easeInOut",
+            }} // Modified transition
             viewport={{ once: true }}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
@@ -65,11 +69,11 @@ export default function AIProcess() {
                 className="h-full bg-accent"
                 initial={{ width: "0%" }}
                 animate={{ width: hoveredIndex === index ? "100%" : "0%" }}
-                transition={{ duration: 0.4 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }} // Modified transition
               />
             </div>
 
-            {/* Step Number Positioned at Top Right */}
+            {/* Step Number Positioned at Bottom Right */}
             <div className="absolute bottom-2 right-2 text-center justify-center items-center rounded-full h-10 w-10 bg-gray-100 text-primary font-bold">
               <p className="p-2">{step.number}</p>
             </div>
@@ -83,24 +87,28 @@ export default function AIProcess() {
                 alt={step.title}
                 className="w-full h-full object-contain transition-opacity duration-300"
                 animate={{ opacity: hoveredIndex === index ? 0 : 1 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }} // Modified transition
               />
             </div>
 
             {/* Full-card Hover Effect */}
-            {hoveredIndex === index && (
-              <motion.div
-                className="absolute inset-0 flex flex-col items-center justify-center bg-accent text-primary font-medium text-lg p-6 rounded-lg"
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                exit={{ y: "100%" }}
-                transition={{ duration: 0.4 }}
-              >
-                <h4 className="text-2xl font-bold">{step.title}</h4>
-                <p className="text-center text-primary mt-2">
-                  {step.description}
-                </p>
-              </motion.div>
-            )}
+            <AnimatePresence>
+              {hoveredIndex === index && (
+                <motion.div
+                  key="hover-overlay" // Added key for AnimatePresence
+                  className="absolute inset-0 flex flex-col items-center justify-center bg-accent text-primary font-medium text-lg p-6 rounded-lg"
+                  initial={{ y: "100%" }}
+                  animate={{ y: 0 }}
+                  exit={{ y: "100%" }}
+                  transition={{ duration: 0.4, ease: "easeInOut" }} // Modified transition
+                >
+                  <h4 className="text-2xl font-bold">{step.title}</h4>
+                  <p className="text-center text-primary mt-2">
+                    {step.description}
+                  </p>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         ))}
       </div>
