@@ -1,7 +1,13 @@
 import "./App.css";
 import { BrowserRouter } from "react-router-dom";
 import { Naves } from "./navs.tsx";
-import { Footer, Navbar, Topbar, CursorGlow } from "./components/index.js";
+import {
+  Footer,
+  Navbar,
+  Topbar,
+  CursorGlow,
+  Goupyadown,
+} from "./components/index.js";
 const App = () => {
   return (
     <BrowserRouter>
@@ -12,6 +18,7 @@ const App = () => {
         <Naves />
         <Footer />
       </div>
+      <Goupyadown />
     </BrowserRouter>
   );
 };
