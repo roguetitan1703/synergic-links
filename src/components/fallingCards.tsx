@@ -20,7 +20,7 @@ const FallingCardsSection = ({ services }) => {
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
-            viewport={{ once: false, amount: 0.4 }}
+            viewport={{ once: true }}
             className="relative w-full bg-gray-800 rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center cursor-pointer hover:bg-accent transition-all"
           >
             <FontAwesomeIcon
