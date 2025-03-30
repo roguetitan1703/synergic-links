@@ -56,7 +56,7 @@ const GetInTouch = ({ active = "basic" }) => {
       {/* Increased py for more vertical spacing */}
       <div className="container mx-auto px-6 text-center">
         <div className="min-h-screen">
-          <h2 className="text-7xl font-bold text-dark-text-primary py-12 mt-16 mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-8 sm:mb-12 md:mb-16 text-accent">
             {/* Reduced mb slightly */}
             Get In Touch
           </h2>
