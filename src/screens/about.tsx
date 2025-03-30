@@ -10,7 +10,7 @@ import {
   faUsers,
   faCheckCircle,
 } from "@fortawesome/free-solid-svg-icons";
-import { BreadCrumbs } from "../components";
+import { BreadCrumbs, AboutStats } from "../components";
 
 const sections = [
   {
@@ -113,10 +113,11 @@ const About = () => {
   return (
     <div className="bg-darkBg text-textLight min-h-screen">
       {/* About Section */}
-      <div className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="py-12 sm:py-16 md:py-20 ">
         <BreadCrumbs />
+        <AboutStats />
         <motion.h2
-          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-8 sm:mb-12 md:mb-16 text-accent"
+          className="py-4 sm:py-6 md:py-8 text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-8 sm:mb-12 md:mb-16 text-accent"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -196,7 +197,7 @@ const About = () => {
       </div>
 
       {/* Integration Section */}
-      <div className="relative w-full min-h-[600px] md:min-h-[800px] lg:min-h-[1000px] bg-gradient-to-r from-primary to-secondary flex items-center justify-center flex-col overflow-hidden py-16 sm:py-20">
+      <div className="hidden relative w-full min-h-[600px] md:min-h-[800px] lg:min-h-[1000px] bg-gradient-to-r from-primary to-secondary flex items-center justify-center flex-col overflow-hidden py-16 sm:py-20">
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute w-40 h-40 sm:w-64 sm:h-64 rounded-full bg-accent top-20 left-10 sm:left-20 blur-3xl"></div>

@@ -14,3 +14,4 @@ export { default as ProgressBar } from "./progress.tsx";
 export { default as Process } from "./process.tsx";
 export { default as FallingCards } from "./fallingCards.tsx";
 export { default as Goupyadown } from "./goUp.tsx";
+export { default as AboutStats } from "./aboutUsStats.tsx";

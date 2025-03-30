@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Added FontAwesome import
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons"; // Added arrow icon
 
 const Goupyadown = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,20 +35,22 @@ const Goupyadown = () => {
       <button
         onClick={scrollToTop}
         className="
-          bg-[#FFD700]
-          hover:bg-[#ffdf4d]
-          text-[#121212]
+          bg-accent
+          hover:bg-accent-hover
+          text-textDark
           font-bold
           py-3
-          px-6
+          px-5
           rounded-full
           shadow-lg
           hover:shadow-xl
+          hover:scale-105
           transition
           duration-300
         "
       >
-        ↑
+        <FontAwesomeIcon icon={faArrowUp} />{" "}
+        {/* Replaced text arrow with FontAwesome icon */}
       </button>
     </div>
   );

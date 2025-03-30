@@ -23,6 +23,7 @@ const services = [
     img: "https://www.synergiclinks.com/assets/img/icon/Building%20Data%20Pipelines%20(ETL%20%20SSIS%20Processes%20Development).png",
     description:
       "We design and implement automated processes to seamlessly extract, transform, and load (ETL) data from various sources.",
+    hoverText: "Expert pipelines to automate your data flow.",
   },
   {
     title: "Migrating to the Cloud (Data Migration)",
@@ -30,6 +31,7 @@ const services = [
     img: "https://www.synergiclinks.com/assets/img/icon/Migrating%20to%20the%20Cloud%20(Data%20Migration).png",
     description:
       "Move your data from legacy systems to modern cloud platforms with minimal disruption and enhanced efficiency.",
+    hoverText: "Efficient cloud migrations with minimal downtime.",
   },
   {
     title: "Ensuring Data Quality (Data Cleansing and Transformation)",
@@ -37,6 +39,7 @@ const services = [
     img: "https://www.synergiclinks.com/assets/img/icon/Ensuring%20Data%20Quality%20(Data%20Cleansing%20and%20Transformation.png",
     description:
       "Identify and rectify inconsistencies, missing information, and duplicate entries to ensure high data quality.",
+    hoverText: "Improve accuracy with our thorough cleansing processes.",
   },
   {
     title: "SQL SERVER REPORTING SERVICES (SSRS) DEVELOPMENT",
@@ -44,6 +47,7 @@ const services = [
     img: "https://www.synergiclinks.com/assets/img/icon/SQL%20SERVER%20REPORTING%20SERVICES%20DEVELOPMENT.png",
     description:
       "Transform raw data into actionable insights with custom reports, automation, and interactive dashboards.",
+    hoverText: "Dynamic reporting that drives informed decisions.",
   },
   {
     title: "SQL SERVER ANALYSIS SERVICES (SSAS) DEVELOPMENT",
@@ -51,6 +55,7 @@ const services = [
     img: "https://www.synergiclinks.com/assets/img/icon/SQL%20SERVER%20ANALYSIS%20SERVICES%20(SSAS)%20DEVELOPMENT.png",
     description:
       "Unlock hidden data potential with advanced modeling and data mining services for strategic decision-making.",
+    hoverText: "Advanced analytics to empower your strategy.",
   },
   {
     title: "Power BI Optimization for Peak Performance",
@@ -58,6 +63,7 @@ const services = [
     img: "https://www.synergiclinks.com/assets/img/icon/Power%20BI%20Optimization%20for%20Peak%20Performance.png",
     description:
       "Optimize dashboards for speed and efficiency, ensuring smooth interaction and fast-loading reports.",
+    hoverText: "Fine-tune your dashboards for seamless performance.",
   },
   {
     title: "AZURE SQL DATABASE DEVELOPMENT",
@@ -65,6 +71,7 @@ const services = [
     img: "https://www.synergiclinks.com/assets/img/icon/AZURE%20SQL%20DATABASE%20DEVELOPMENT.png",
     description:
       "Design robust Azure SQL architectures prioritizing performance, scalability, and security.",
+    hoverText: "Build secure and scalable Azure databases.",
   },
   {
     title: "AZURE SQL DATA WAREHOUSE DEVELOPMENT",
@@ -72,6 +79,7 @@ const services = [
     img: "https://www.synergiclinks.com/assets/img/icon/AZURE%20SQL%20DATABASE%20WHAREHOUSE%20DEVELOPMENT.png",
     description:
       "Build secure, scalable data warehouses for complex queries using Azure Synapse Analytics.",
+    hoverText: "Empower your queries with a robust data warehouse.",
   },
 ];
 
@@ -159,7 +167,10 @@ const DatabaseDevelopmentSection = () => {
               {feature.title}
             </h3>
             <p className="text-gray-300 mt-2">{feature.description}</p>
-            <div data-tooltip-id={`tooltip-${index}`}>
+            <div
+              data-tooltip-id={`tooltip-${index}`}
+              className="absolute right-2 top-2"
+            >
               <span className="text-gray-500 text-sm cursor-help">ℹ️</span>
             </div>
             <Tooltip id={`tooltip-${index}`} place="top">

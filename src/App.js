@@ -1,4 +1,5 @@
 import "./App.css";
+import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { Naves } from "./navs.tsx";
 import {
