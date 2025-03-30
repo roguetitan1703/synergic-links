@@ -68,8 +68,7 @@ module.exports = {
         },
         slide: {
           "0%": { transform: "translateX(0)" },
-          "50%": { transform: "translateX(10px)" },
-          "100%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(200px)" },
         },
         wiggle: {
           "0%, 100%": { transform: "rotate(-3deg)" },
@@ -87,7 +86,7 @@ module.exports = {
         // rotate: "rotate 12s linear infinite",
         // flicker: "flicker 1s infinite",
         wiggle: "wiggle 1s ease-in-out infinite",
-        slide: "slide 1s ease-in-out infinite",
+        slide: "slide 1s ease-in-out",
       },
 
       backgroundSize: {

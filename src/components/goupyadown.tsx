@@ -9,7 +9,11 @@ const Goupyadown = () => {
     const documentHeight = document.documentElement.scrollHeight;
     const scrollTop = window.scrollY;
 
-    setIsAtBottom(windowHeight + scrollTop >= documentHeight - 20);
+    if (scrollTop >= documentHeight - windowHeight - 400) {
+      setIsAtBottom(true);
+    } else {
+      setIsAtBottom(false);
+    }
   };
 
   // Scroll to bottom function
@@ -26,7 +30,7 @@ const Goupyadown = () => {
   }, []);
 
   return (
-    <div className="fixed bottom-10 right-10">
+    <div className="fixed bottom-10 right-10 z-50">
       <button
         onClick={scrollToBottom}
         className={`
@@ -41,7 +45,7 @@ const Goupyadown = () => {
           rounded-full
           transition-all
           duration-300
-          ${isAtBottom ? "translate-x-4 animate-slide" : ""}
+          ${isAtBottom ? "translate-x-52 animate-slide" : ""}
         `}
       >
         {isAtBottom ? "Next Page →" : "Go Down ↓"}
