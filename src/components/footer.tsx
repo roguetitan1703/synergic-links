@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
       </div>
       {/* Footer Main Section */}
-      <div className="w-full flex justify-center h-[260px]">
+      <div className="w-full flex justify-center mt-10 h-[270px]">
         <div className="w-2/3 flex justify-between text-white">
           {/* Left Section - Logo & Contact */}
           <div className="w-1/3 flex flex-col items-start space-y-4">

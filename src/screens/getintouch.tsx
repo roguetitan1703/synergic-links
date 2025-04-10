@@ -51,6 +51,7 @@ const GetInTouch = ({ active = "basic" }) => {
   };
 
   return (
+    <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 text-white py-16 px-8 md:px-16">
     <section className="bg-dark-layer-0 py-20 px-6  ">
       <BreadCrumbs />
       {/* Increased py for more vertical spacing */}
@@ -87,6 +88,7 @@ const GetInTouch = ({ active = "basic" }) => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

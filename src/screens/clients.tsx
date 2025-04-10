@@ -1,12 +1,13 @@
 import React from "react";
 import { baseCompanyNames } from "../devdata/constants/company";
-
-const Clients = () => {
+import {BreadCrumbs}  from "../components";
+const   Clients = () => {
   return (
     <div className="min-h-screen bg-[#121212]">
+      <BreadCrumbs/>
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-[#1B3A57] to-[#5E3A9A] p-8 md:p-16">
-        <div className="container mx-auto px-4">
+         <div className="container mx-auto px-4">        
           <h1 className="text-5xl md:text-6xl font-bold text-[#FFD700] text-center mb-4 tracking-wide">
             Our Trusted Clients
           </h1>

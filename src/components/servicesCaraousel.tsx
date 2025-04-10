@@ -40,7 +40,7 @@ const ServicesCarousel = ({ services }) => {
       >
         {services.map((service, index) => (
           <div
-            className="relative w-full flex-shrink-0 flex flex-col md:flex-row items-center
+            className="relative w-full flex-shrink-0 flex justify-center items-center
                        bg-darkBg p-8 md:p-16 "
             key={index}
           >
@@ -48,11 +48,14 @@ const ServicesCarousel = ({ services }) => {
             <img
               src={service.imageSrc}
               alt={service.heading}
-              className="w-2/3 h-auto object-cover brightness-50"
+             className="w-4/5 md:w-2/3 h-auto md:h-auto object-cover brightness-50 rounded-lg"
+              // className="w-2/3 h-auto object-cover brightness-50"
             />
 
             {/* Overlay Text */}
-            <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center text-white">
+            <div className="absolute inset-0 flex flex-col items-center justify-center px-4 md:px-12 text-center text-white max-w-3xl mx-auto">
+
+            {/* <div className="absolute inset-0 flex flex-col items-center justify-center p-8 text-center text-white"> */}
               <h3 className="text-3xl font-semibold text-accent mb-4">
                 {service.heading}
               </h3>
